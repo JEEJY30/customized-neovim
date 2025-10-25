@@ -8,7 +8,7 @@ return {
   config = function()
     require('mason').setup()
     require('mason-lspconfig').setup({
-      ensure_installed = { 'lua_ls', 'pyright', 'ts_ls' },
+      ensure_installed = { 'lua_ls', 'pyright', 'ts_ls', 'gopls' },
     })
 
     local cmp_nvim_lsp = require('cmp_nvim_lsp')
@@ -46,8 +46,24 @@ return {
       capabilities = capabilities,
     })
 
+    -- Go Language Server
+    vim.lsp.config('gopls', {
+      capabilities = capabilities,
+      cmd = { 'gopls' },
+      filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
+      root_dir = vim.fs.root(0, { 'go.work', 'go.mod', '.git' }),
+      settings = {
+        gopls = {
+          completeUnimported = true,
+          usePlaceholders = true,
+          analyses = {
+            unusedparams = true,
+          },
+        },
+      },
+    })
+
     -- Enable the language servers
-    vim.lsp.enable({ 'lua_ls', 'pyright', 'ts_ls' })
+    vim.lsp.enable({ 'lua_ls', 'pyright', 'ts_ls', 'gopls' })
   end,
 }
-
