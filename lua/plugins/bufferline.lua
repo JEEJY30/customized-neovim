@@ -13,7 +13,7 @@ return {
         left_mouse_command = "buffer %d",
         middle_mouse_command = nil,
         indicator = {
-          icon = '▎',
+          icon = '| ',
           style = 'icon',
         },
         buffer_close_icon = '󰅖',

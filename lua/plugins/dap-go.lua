@@ -10,12 +10,6 @@ return {
     local dapui = require('dapui')
 
     -- Setup mason-nvim-dap (auto-install debug adapters)
-    require('mason-nvim-dap').setup({
-      ensure_installed = { 'delve' },
-      automatic_installation = true,
-      handlers = {},
-    })
-
     -- Better DAP UI configuration with stable layout
     dapui.setup({
       icons = { expanded = "▾", collapsed = "▸", current_frame = "▸" },
