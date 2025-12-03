@@ -66,7 +66,7 @@ return {
     vim.keymap.set('n', '<leader>bo', ':BufferLineCloseOthers<CR>', { silent = true, desc = 'Close other buffers' })
     vim.keymap.set('n', '<leader>br', ':BufferLineCloseRight<CR>', { silent = true, desc = 'Close buffers to right' })
     vim.keymap.set('n', '<leader>bl', ':BufferLineCloseLeft<CR>', { silent = true, desc = 'Close buffers to left' })
-    vim.keymap.set('n', '<leader>bp', ':BufferLinePick<CR>', { silent = true, desc = 'Pick buffer' })
+    vim.keymap.set('n', '<leader>bll', ':BufferLinePick<CR>', { silent = true, desc = 'Pick buffer' })
     vim.keymap.set('n', '<leader>1', '<Cmd>BufferLineGoToBuffer 1<CR>', { silent = true, desc = 'Go to buffer 1' })
     vim.keymap.set('n', '<leader>2', '<Cmd>BufferLineGoToBuffer 2<CR>', { silent = true, desc = 'Go to buffer 2' })
     vim.keymap.set('n', '<leader>3', '<Cmd>BufferLineGoToBuffer 3<CR>', { silent = true, desc = 'Go to buffer 3' })
